@@ -1,9 +1,9 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-}
+} */
 
 
 .card {
@@ -62,3 +62,29 @@ img {
     align-items: center;
     flex-wrap: wrap;
 }
+  .counter {
+      width: 150px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .counter input {
+      width: 50px;
+      border: 0;
+      line-height: 30px;
+      font-size: 20px;
+      text-align: center;
+      background: #0052cc;
+      color: #fff;
+      appearance: none;
+      outline: 0;
+  }
+  .counter span {
+      display: block;
+      font-size: 25px;
+      padding: 0 10px;
+      cursor: pointer;
+      color: #0052cc;
+      user-select: none;
+  }
