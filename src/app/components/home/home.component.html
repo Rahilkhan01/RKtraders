@@ -4,7 +4,7 @@
         <div class="card">
             <!-- <ng-container *ngFor="let item of productList"> -->
             <div class="imgbox">
-                <img src="./assets/img/cookerimg.jpeg" alt="">
+                <img src="./assets/img/blackcooker.jpeg" alt="">
             </div>
             <div class="content">
                 <h2>Cooker</h2>
@@ -18,14 +18,21 @@
       <option value="opel">Handi</option>
       <option value="audi">Induction</option>
     </select>
+    <div class="counter">
+      <span class="down" onClick='decreaseCount(event, this)'>-</span>
+      <input type="text" value="1">
+      <span class="up" onClick='increaseCount(event, this)'>+</span>
+    </div>
+
     <input type="text" value="Remarks">
+    <button class="btn btn-primary">Add to cart</button>
   </form>
             </div>
         <!-- </ng-container> -->
         </div>
         <div class="card">
             <div class="imgbox">
-                <img src="./assets/img/kadai.jpg" alt="">
+                <img src="./assets/img/blackcooker.jpeg" alt="">
             </div>
             <div class="content">
                 <h2>Kadai</h2>
@@ -39,7 +46,14 @@
                      <option value="opel">With LID</option>
                      <option value="audi">Induction</option>
                    </select>
+                   <div class="counter">
+                    <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                    <input type="text" value="1">
+                    <span class="up" onClick='increaseCount(event, this)'>+</span>
+                  </div>
+      
                    <input type="text" value="Remarks">
+                   <button class="btn btn-primary">Add to cart</button>
                  </form>
             </div>
         </div>

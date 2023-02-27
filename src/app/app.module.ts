@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HomeComponent } from './components/home/home.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { HistoryComponent } from './history/history.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import {  HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     CartComponent,
-    HomeComponent
+    HomeComponent,
+    HistoryComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
