@@ -1,0 +1,21 @@
+.copyright_section {
+    width: 100%;
+    float: left;
+    background-color: #ffffff;
+    height: auto;
+}
+.copyright {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    margin-left: 0;
+}
+.copyright a {
+    color: #000;
+}
+.copyright a:hover{
+    color: #09d066;
+}
+

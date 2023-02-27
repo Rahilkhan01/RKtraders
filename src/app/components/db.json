@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "id": 1
+    },
+    {
+      "name": "Diamond",
+      "quantity": "1",
+      "image": "@/C:/Users/hirah/RKtraders/src/assets/img/blackcooker.jpeg",
+      "id": 2
+    }
+  ]
+}
