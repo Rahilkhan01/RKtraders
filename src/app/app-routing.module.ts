@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HistoryComponent } from './history/history.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { SellersignupComponent } from './components/sellersignup/sellersignup.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,12 @@ const routes: Routes = [
   },
   {
     path: 'confirmation',component: ConfirmationComponent
+  },
+  {
+    path: 'Signup',component: SellersignupComponent
+  },
+  {
+    path: 'Cart',component: CartComponent 
   },
 ];
 

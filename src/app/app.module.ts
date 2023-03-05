@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { HistoryComponent } from './history/history.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { SellersignupComponent } from './components/sellersignup/sellersignup.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     CartComponent,
     HomeComponent,
     HistoryComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    SellersignupComponent,
+
   ],
   imports: [
     BrowserModule,
