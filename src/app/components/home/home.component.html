@@ -1,25 +1,29 @@
+<div><h1 class="hone">Total Stock: 5000</h1></div>
 <section class="product">
+  
   <div class="container text-center">
     <div class="row">
       <div class="col-md-3" *ngFor="let item of productArray" >
         <div class="box">
-          <div class="product_image">
             <img class="img1" src="{{item.img}}" alt="">
           </div>
           <div class="content">
             <h3>{{item.name}}</h3>
+            <p class="pone">PREMIUM STAINLESS STEEL INNER LID PRESSURE COOKER WITH TRIPLY SANDWICH BOTTOM,<br> 3/5L, INDUCTION BASE</p>
+            <p class="ptwo">
+              Easy to prepare & serve food | Induction base</p>
             <h4>{{item.amt}}</h4>
             <button type="button" class="btn" (click)="inc(item)"><i class="fa-solid fa-plus"></i></button>
             &nbsp;
             <span>{{item.qnt}}</span>
             &nbsp; 
-            <button type="button" class="btn" (click)="dec(item)"><i class="fa-solid fa-minus"></i></button>
+            <button type="button" class="btn" (click)="dec(item)"><i class="fa-solid fa-minus"></i></button>&nbsp;
+            <button type="button" (click)="addCart(item)" class="btn btn-secondary">Add To Cart</button>
           </div>
-          <button type="button" (click)="addCart(item)" class="btn btn-secondary">Add To Cart</button>
+         
         </div>
       </div>
     </div>
-   </div>
 </section>
 <!-- <section class="section">
   <div class="container">

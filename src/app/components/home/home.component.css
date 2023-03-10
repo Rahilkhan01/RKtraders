@@ -1,14 +1,27 @@
 .product{
-    padding: 40px 0;
+    padding-top: 10rem;
+    padding-left: 8rem;
+    align-items: center;
 }
 .box{
-    padding: 20px;
+    border: 1px #E90064 solid;
+    background-color: #FF5F9E;
+    align-items: right;
+    margin: -3rem;
+    width: 120%;
+    height: 60vh;
     border: 2px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 10rem;
 }
 .img1{
-    width: 14rem;
-    height: 15rem;
+    margin-top: 10vh;
+    position: relative;
+    left: 50vh;
+    border: 1vh solid;
+    border-color: -moz-linear-gradient(top, #FF5F9E, #E90064);
+    width: 11rem;
+    height: 11rem;
 }
 .btn{
     border: 1px solid black;
@@ -16,14 +29,40 @@
     background-color: black;
     color: aliceblue;
     font-size: 10px;
-}
-.content h4{
-    margin-top: 10px;
+} 
+.content{
+    align-items: center;
+    position: relative;
+    bottom: 25rem;
+    overflow-x: auto;
 }
 .content span{
     font-size: 18px;
     font-weight: 500 ;
 }
-.row{
-    padding-left: 50px;
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+/* @media (min-width: 768px)
+col-md-3 {
+    flex: 0 0 auto;
+    width: 47%;
+} */
+.hone{
+   font-size: large;
+   position: relative;
+   left: 1rem;
+   top: 5rem;
+}
+.pone{
+    font-size: small;
+}
+.ptwo{
+    font: small;
+    align-items: justify;
 }

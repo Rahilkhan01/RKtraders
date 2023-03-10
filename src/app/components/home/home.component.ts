@@ -78,7 +78,7 @@ else{
   var id = category.proId;
   let index:number = -1;
   this.itemsCart = 
-JSON.parse
+JSON.stringify
 (localStorage.getItem
 ('localCart'));
 for
@@ -109,7 +109,7 @@ this.itemsCart.push(category);
 
 cartNumber:number = 0;
 cartNumberFunc(){
-  var cartValue = JSON.parse (localStorage.getItem('localCart'));
+  var cartValue = JSON.stringify (localStorage.getItem('localCart'));
   this.cartNumber = cartValue.length;
   this.auth.cartSubject.next(this.cartNumber);
 }
