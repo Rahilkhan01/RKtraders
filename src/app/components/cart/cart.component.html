@@ -1,6 +1,6 @@
 <section class="cart_section">
     <h2>Cart</h2>
-    <div class="table_responsive" *ngIf="getCardDetails">
+    <div class="table_responsive" >
         <table class="table table-dark">
             <thead>
               <tr>
@@ -14,29 +14,29 @@
               <tr *ngFor="let get CartDetail of getCartDetails"> 
                 <th scope="row">1</th>
                 <td><img class="img" src="./assets/img/blackcooker.jpeg" alt=""></td>
-                <td>₹{{getCartDetail.amt}}</td>
+                <td>₹3993</td>
                 <td>
-                    <button type="button" (click)='incQnt(getCartDetail.proId,getCartDetail.qnt)" class="btn"><i class="fa-solid fa-plus"></i></button>
-                    <span>{{getCartDetail.qnt}}</span>
-                    <button type="button" (click)='decQnt(getCartDetail.proId,getCartDetail.qnt)' class="btn"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button"  class="btn"><i class="fa-solid fa-plus"></i></button>
+                    <span></span>
+                    <button type="button"  class="btn"><i class="fa-solid fa-minus"></i></button>
                  </td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td><img class="img" src="./assets/img/blackcooker.jpeg" alt=""></td>
-                <td>₹{{getCartDetail.amt}}</td>
+                <td>₹4889</td>
                 <td>
                     <button type="button" class="btn"><i class="fa-solid fa-plus"></i></button>
-                    <span>{{getCartDetail.qnt}}</span>
+                    <span>1</span>
                     <button type="button" class="btn"><i class="fa-solid fa-minus"></i></button>
                  </td></tr>
               <tr>
                 <th scope="row">3</th>
                 <td><img class="img" src="./assets/img/blackcooker.jpeg" alt=""></td>
-                <td>₹{{getCartDetail.amt}}</td>
+                <td>-₹4899</td>
                 <td>
                     <button type="button" class="btn"><i class="fa-solid fa-plus"></i></button>
-                    <span>{{getCartDetail.qnt}}</span>
+                    <span></span>
                     <button type="button" class="btn"><i class="fa-solid fa-minus"></i></button>
                  </td> </tr>
             </tbody>

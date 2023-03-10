@@ -12,6 +12,7 @@ import { ApiService } from 'src/app/Service/api.service';
 export class HomeComponent implements OnInit   {
 
   public productList : any ;
+  auth: any;
   constructor (private api : ApiService ) { } 
 
   ngOnInit(): void{
@@ -62,34 +63,54 @@ dec(item: any){
  }
 }
 
- 
- itemsCart:any = [];
- addCart(category: { proId: any; qnt: any; }){
+itemsCart:any = [];
+addCart(category: any = []){
   let cartDataNull = 
-  localStorage.getItem('localCart');
-  if(cartDataNull == null){
-    let storeDataGet:any =[];
-    storeDataGet.push(category);
-    localStorage.setItem('localCart',JSON.stringify(storeDataGet));
-  }
-  else {
-    var id = category.proId;
-    let index:number = -1 ;
-    this.itemsCart = JSON.stringify(localStorage.getItem('localCart'));
-    for(let i=0; i<this.itemsCart.length; i++){
-    if(parseInt(id) === parseInt(this.itemsCart[i].proId)){
-      this.itemsCart[i].qnt = category.qnt;
+localStorage.getItem('localCart');
+if(cartDataNull == null){
+  let storeDataGet:any = [];
+storeDataGet.push(category);
+  localStorage.setItem
+    ('localCart', 
+ JSON.stringify(storeDataGet));
+}
+else{
+  var id = category.proId;
+  let index:number = -1;
+  this.itemsCart = 
+JSON.parse
+(localStorage.getItem
+('localCart'));
+for
+(let i=0; i<this.itemsCart.length; 
+i++){
+if(parseInt(id) === 
+parseInt(this.itemsCart[i].proId))
+{
+    this.itemsCart[i].qnt = 
+category.qnt;
       index = i;
       break;
     }
   }
   if(index == -1){
-    this.itemsCart.push(category);
-    localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
+this.itemsCart.push(category);
+    localStorage.setItem
+('localCart', JSON.stringify
+(this.itemsCart));
   }
   else{
-    localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
-   }
+    localStorage.setItem
+('localCart', JSON.stringify
+(this.itemsCart));
   }
- }
+}
+}
+
+cartNumber:number = 0;
+cartNumberFunc(){
+  var cartValue = JSON.parse (localStorage.getItem('localCart'));
+  this.cartNumber = cartValue.length;
+  this.auth.cartSubject.next(this.cartNumber);
+}
 }
