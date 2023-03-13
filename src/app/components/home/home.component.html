@@ -1,4 +1,4 @@
-<div><h1 class="hone">Total Stock: 5000</h1></div>
+<!-- <div><h1 class="hone">Total Stock: 5000</h1></div>
 <section class="product">
   
   <div class="container text-center">
@@ -8,7 +8,7 @@
             <img class="img1" src="{{item.img}}" alt="">
           </div>
           <div class="content">
-            <h3>{{item.name}}</h3>
+            <h1>{{item.name}}</h1>
             <p class="pone">PREMIUM STAINLESS STEEL INNER LID PRESSURE COOKER WITH TRIPLY SANDWICH BOTTOM,<br> 3/5L, INDUCTION BASE</p>
             <p class="ptwo">
               Easy to prepare & serve food | Induction base</p>
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-</section>
+</section> -->
 <!-- <section class="section">
   <div class="container">
     <div class="col-lg-3"></div>
@@ -75,3 +75,89 @@
         <button type="button" class="btn btn-secondary">Add To Cart</button>
       </div>
     </div> -->
+
+    <!-- template -->
+  
+    <div><h1 class="hone">Total Stock: 5000</h1>  <span class="material-symbols-outlined">
+      person
+      </span>
+  
+   <!-- cooker section start -->
+   <div class="cooker_section">
+      <div id="main_slider" class="carousel " data-ride="carousel">
+         <div class="carousel-inner" *ngFor="let item of productArray">
+            <div class="carousel-item active">
+               <div class="container">
+                  <h1 class="cooker_taital">{{item.headname}}</h1>
+                  <div class="cooker_section_2">
+                     <div class="row">
+                        <div class="col-lg-4 col-sm-4">
+                           <div class="box_main">
+                              <h4 class="cooker_text">{{item.name}}</h4>
+                              <p class="price_text">Price  <span style="color: #262626;">₹ {{item.amt}}</span></p>
+                              <div class="cooker_img"><img class="img1" src="{{item.img}}"></div>
+                              <div class="btn_main">
+                                 <div class="buy_bt"><a href="#" (click)="handleAddToCart()">Buy Now</a></div>
+                                 <button type="button" class="btn" (click)="inc(item)"><i class="fa-solid fa-plus"></i></button>
+                                 &nbsp;
+                                 <span>{{item.qnt}}</span>
+                                 &nbsp; 
+                                 <button type="button" class="btn" (click)="dec(item)"><i class="fa-solid fa-minus"></i></button>&nbsp;
+                              
+                                 <div class="seemore_bt"><a href="#">See More</a></div>
+                               </div>
+                            </div>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+            </div>
+         </div>
+      </div>
+ <div class="row" style="padding-right: 10vh;margin-left: -20vh;">  
+ <div class="col">
+  <app-cart></app-cart>
+ </div></div>
+</div>
+         <!-- <div class="carousel-item">
+               <div class="container">
+                  <h1 class="cooker_taital">Kadai Models</h1>
+                  <div class="cooker_section_2">
+                     <div class="row">
+                        <div class="col-lg-4 col-sm-4">
+                           <div class="box_main">
+                              <h4 class="shirt_text">Man T -shirt</h4>
+                              <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                              <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
+                              <div class="btn_main">
+                                 <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                 <div class="seemore_bt"><a href="#">See More</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                           <div class="box_main">
+                              <h4 class="shirt_text">Man -shirt</h4>
+                              <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                              <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                              <div class="btn_main">
+                                 <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                 <div class="seemore_bt"><a href="#">See More</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                           <div class="box_main">
+                              <h4 class="shirt_text">Woman Scart</h4>
+                              <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                              <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                              <div class="btn_main">
+                                 <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                 <div class="seemore_bt"><a href="#">See More</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->

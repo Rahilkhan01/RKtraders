@@ -1,4 +1,4 @@
-.product{
+/* .product{
     padding-top: 10rem;
     padding-left: 8rem;
     align-items: center;
@@ -48,11 +48,6 @@
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-top: var(--bs-gutter-y);
 }
-/* @media (min-width: 768px)
-col-md-3 {
-    flex: 0 0 auto;
-    width: 47%;
-} */
 .hone{
    font-size: large;
    position: relative;
@@ -65,4 +60,165 @@ col-md-3 {
 .ptwo{
     font: small;
     align-items: justify;
+} */
+
+/* template */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
+
+/* Cooker section start */
+
+.cooker_section {
+    width: 100%;
+    position: relative;
+    left: 200px;
+    padding-top: 100px;    
+}
+
+.cooker_taital {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    left: 50px;
+    font-weight: bold;
+}
+
+.cooker_section_2 {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.box_main {
+    width: 50rem;
+    background-color: #ffffff;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0px 0 30px 10px #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.cooker_text {
+    width: 100%;
+    font-size: 30px;
+    color: #30302e;
+    text-align: left;
+    font-weight: bold;
+    font-family: Georgia;
+}
+
+.price_text {
+    width: 100%;
+    font-size: 16px;
+    color: #f26522;
+    text-align: right;
+    margin: 0px;
+    
+}
+
+.cooker_img {
+    transition: transform .2s;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px;
+    min-height: 370px;
+}
+.cooker_img:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+.btn_main {
+    width: 100%;
+    display: flex;
+}
+
+.buy_bt {
+    float: left;
+    width: 100%;
+}
+
+.buy_bt a {
+    width: 100%;
+    font-size: 16px;
+    color: #f26522;
+    background-color: transparent;
+    text-align: right;
+    font-weight: bold;
+}
+
+.buy_bt a:hover {
+    background-color: transparent;
+    color: #262626;
+}
+
+.seemore_bt {
+    width: 100%;
+    float: right;
+    text-align: right;
+}
+
+.seemore_bt a {
+    width: 100%;
+    font-size: 16px;
+    color: #262626;
+    background-color: transparent;
+    text-align: right;
+}
+
+.seemore_bt a:hover {
+    background-color: transparent;
+    color: #f26522;
+}
+
+#main_slider a.carousel-control-next {
+    right: 615px;
+    top: 105%;
+}
+
+#main_slider a.carousel-control-prev {
+    left: 615px;
+    top: 105%;
+}
+
+#main_slider .carousel-control-next,
+#main_slider .carousel-control-prev {
+    width: 55px;
+    height: 55px;
+    background-color: #30302e;
+    opacity: 1;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+#main_slider .carousel-control-next:focus,
+#main_slider .carousel-control-next:hover,
+#main_slider .carousel-control-prev:focus,
+#main_slider .carousel-control-prev:hover {
+    color: #fff;
+    background-color: #f26522;
+}
+
+
+/* cooker section end */
+.img1{
+    width: 15rem;
+    height: 15rem;
+}
+.hone{
+    font-size: large;
+    position: relative;
+    left: 1rem;
+    top: 5rem;
+    font-family: Georgia;
+ }
+
+ 
