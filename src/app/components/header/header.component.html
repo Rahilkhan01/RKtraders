@@ -30,8 +30,9 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          
+          <input  class="form-control me-2" #searchInput type="search" placeholder="Search" aria-label="Search">
+          <button routerLink="search" class="btn btn-outline-success"(click)="submitSearch(searchInput.value)" type="submit">Search</button>
         </form>
       </div> 
   </nav>
@@ -43,20 +44,22 @@
 <div class="offcanvas offcanvas-start" id="demo">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title">RK TRADERS</h1>
+    <img src="./assets/img/logo.png" alt="" class="logo">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
+  <hr>
   <div class="offcanvas-body">
-    <p>Order</p>
-    <p>Confirmation</p>
-    <p>History</p>
-    <p>Singup</p>
-    <p>Cart</p>
+    <p>Cookers</p>
+    <p>Kadai</p>
+    <p>Tandoor</p>
+    <p>Electric Iron</p>
+    <p>Water Cooler</p>
   </div>
 </div>
 
 <div class="container-fluid mt-3">
   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="float: right;">
-    Open Menu
+    All Catagories
   </button>
 </div>
 

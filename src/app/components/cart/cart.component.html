@@ -1,4 +1,35 @@
-<div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+<!-- <ng-container *ngIf="true">
+<div class="container">
+  <div class="card-table">
+    <div class="cart-product">
+      <table class='table'>
+        <thead class="'thead-dark">
+          <tr class="table table_responsive">
+            <th scope="col">S.n</th>
+                  <th scope="col">Products</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="product in products">
+  
+            <th scope="row">1</th>
+            <td>Diamond</td>
+            <td>Image</td>
+            <td>Quantity</td>
+            <td>400</td>
+          </tr>
+    
+       </table>
+    </div>
+  </div>
+</div>
+</ng-container> -->
+
+<ng-container *ngIf="true">
+  <div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
 <section class="cart_section">
     <h2>Cart</h2>
     <div class="table_responsive" *ngIf="cartItems.length > 0" >
@@ -20,7 +51,8 @@
               </tr>
             </tbody>
           </table>
-          <button type="button" class="btn btn-danger">Remove All Items</button>
+          <button type="button" class="btn btn-danger" (click)="deleteall()">Remove All Items</button>
           <h2 class="total"><strong>Total </strong>{{cartTotal | currency : 'INR'}}</h2>
     </div>
 </section>
+</ng-container>

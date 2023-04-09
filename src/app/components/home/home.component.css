@@ -68,6 +68,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    margin-top: 30px;
 }
 
 /* Cooker section start */
@@ -84,7 +85,7 @@
     width: 100%;
     font-size: 50px;
     background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     left: 50px;

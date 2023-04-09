@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  route: any;
+  submitSearch(val:string){
+    console.warn(val)
+    this.route.navigate(['search/${val'])
+  }
 }

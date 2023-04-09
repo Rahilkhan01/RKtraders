@@ -11,6 +11,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { HistoryComponent } from './history/history.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { SellersignupComponent } from './components/sellersignup/sellersignup.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SellersignupComponent } from './components/sellersignup/sellersignup.co
     HistoryComponent,
     ConfirmationComponent,
     SellersignupComponent,
+    SearchComponent,
 
   ],
   imports: [
