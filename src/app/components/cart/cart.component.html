@@ -26,33 +26,54 @@
     </div>
   </div>
 </div>
-</ng-container> -->
+</ng-container>
 
-<ng-container *ngIf="true">
+<ng-container>
   <div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
 <section class="cart_section">
     <h2>Cart</h2>
-    <div class="table_responsive" *ngIf="cartItems.length > 0" >
-        <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">S.n</th>
-                <th scope="col">Products</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of cartItems"> 
-                <th scope="row">{{item.proId}}</th>
-                <td><img class="img" src="{{item.img}}" alt=""></td>
-                <td>{{item.qnt}}</td>
-                <td>₹ {{item.amt}}</td>
-              </tr>
-            </tbody>
-          </table>
-          <button type="button" class="btn btn-danger" (click)="deleteall()">Remove All Items</button>
-          <h2 class="total"><strong>Total </strong>{{cartTotal | currency : 'INR'}}</h2>
+    <div class="table_responsive" *ngIf="let item of cartItems > 0" >
+    <ul>
+      <li *ngFor="let item of cartItems">{name} - {amt}</li>
+    </ul>    
     </div>
 </section>
-</ng-container>
+</ng-container> -->
+<!-- <div>
+  <h2>Cart</h2>
+  <ul>
+    <li *ngFor="let item of cartItems">{{ item.name} } - { {item.price }}</li>
+  </ul>
+  <p>Total: {{ cartItems.reduce((a, b) => a + b.price, 0) | currency }}</p>
+  <p>Items in Cart: {{cartItems.length}}</p>
+</div> -->
+<div class="container">
+  <h1 class="text-center">Cart</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems; let i = index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ item.headname }}</td>
+        <td>{{ item.qnt }}</td>
+        <td>{{ item.amt | currency }}</td>
+        <!-- <td>{{ (item.qnt * item.amt) | currency }}</td> -->
+      </tr>
+      <tr>
+        <td colspan="4">Cart Total</td>
+        <td>{{ cartTotal | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-right">
+    <!-- <button class="btn btn-danger" (click)="deleteall()">Clear Cart</button> -->
+  </div>
+</div>

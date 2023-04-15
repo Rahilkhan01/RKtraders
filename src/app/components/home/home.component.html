@@ -78,14 +78,15 @@
 
     <!-- template -->
   
-    <div><h1 class="hone">Total Stock: 5000</h1>
+   
   <div class="container-fluid">
     <h1>RK Traders- Your one-stop online marketplace for kitechen appliances.</h1>
     <p>Shop for quality pressure cookers and kitchen appliances at affordable prices</p>
   </div>
+  <div><h1 class="hone">Total Stock: 5000</h1>
    <!-- cooker section start -->
    <div class="cooker_section">
-      <div id="main_slider" class="carousel " data-ride="carousel">
+      <div id="main_slider" class="carousel" data-ride="carousel">
          <div class="carousel-inner" *ngFor="let item of productArray">
             <div class="carousel-item active">
                <div class="container">
@@ -98,7 +99,7 @@
                               <p class="price_text">Price  <span style="color: #262626;">₹ {{item.amt}}</span></p>
                               <div class="cooker_img"><img class="img1" src="{{item.img}}"></div>
                               <div class="btn_main">
-                                 <div class="buy_bt"><a href="#" (click)="handleAddToCart()">Buy Now</a></div>
+                                 <div class="buy_bt"><a href="#" (click)="addtoCart(item)">Buy Now</a></div>
                                  <button type="button" class="btn" (click)="inc(item)"><i class="fa-solid fa-plus"></i></button>
                                  &nbsp;
                                  <span>{{item.qnt}}</span>
@@ -117,7 +118,7 @@
       </div>
  <div class="row" style="padding-right: 10vh;margin-left: -20vh;">  
  <div class="col">
-  <app-cart></app-cart>
+ 
  </div></div>
  
  <div class="mt-4 p-5 bg-dark text-white rounded" style="position:relative; right:13vh">

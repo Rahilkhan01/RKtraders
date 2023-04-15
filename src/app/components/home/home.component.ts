@@ -58,12 +58,12 @@ export class HomeComponent implements OnInit   {
   
   }
 
-  addToCart(productArray){
+  addToCart(){
     // this.msg.sendMsg(this.productArray)
     // this.productArray.forEach((a:any)=>{
     //   Object.assign(a,{_quantity:1,_total:a.price})
     // })
-    this..push(this.productArray);
+    (this.productArray);
     alert('Product added to cart!');
   }
   productArray =[
